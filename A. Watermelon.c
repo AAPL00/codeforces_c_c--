@@ -2,7 +2,7 @@
 int main() {
     int weight;
     scanf("%d", &weight);
-    if (weight == 0) {
+    if (weight == 0 || weight == 2) {
         printf("NO");
     }
     else {
