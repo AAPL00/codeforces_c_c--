@@ -20,5 +20,6 @@ int main() {
             }
         }
          printf("%d", number_of_advancers);
-    }     
+    }
+    return 0;  
 }
