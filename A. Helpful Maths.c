@@ -4,33 +4,34 @@ int main() {
     int one = 0;
     int two = 0;
     int three = 0;
-    char string[100];
+    char string[101];
     int string_size = 0;
     scanf("%s", string);
-    for(int i = 0; i < 100; i++) {
+    for(int i = 0; i < 101; i++) {
         switch (string[i]) {
         case '1' : one++; break;
         case '2' : two++; break;
-        case '3' : three++;
+        case '3' : three++; break;
         }
     }
-    char newstring[strlen(string)];
-    printf("%d\n %d\n %d\n", one, two, three);
     int i = 0;
-    for (i; i <= one; i+=2) {
-        newstring[i] = '1';
-        printf("%c", newstring[i]);
+    while (one != 0) {
+        string[i] = '1';
+        i += 2;
+        one--;
     }
-    for (i; i <= i + two; i+=2) {
-        newstring[i] = '2';
+    while (two != 0) {
+        string[i] = '2';
+        i += 2;
+        two--;
     }
-    for (i; i <= i + two + three; i+=2) {
-        newstring[i] = '3';
+    while (three != 0) {
+        string[i] = '3';
+        i += 2;
+        three--;
     }
-    for (int i = 1; i < strlen(newstring) - 1; i+=2) {
-        newstring[i] = '+';
+    for (int i = 1; i < strlen(string); i += 2) {
+        string[i] = '+';
     }
-    for (int i = 0; i < strlen(newstring); i++) {
-        printf("%c", newstring[i]);
-    }
+    printf("%s", string);  
 }
