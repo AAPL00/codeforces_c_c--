@@ -17,8 +17,8 @@ int main() {
             }
         }
     }
-    int row_distance = 3 - row;
-    int column_distance = 3 - column;
+    int row_distance = 2 - row;
+    int column_distance = 2 - column;
     row_distance = abs(row_distance);
     column_distance = abs(column_distance);
     printf("%d", column_distance + row_distance);
