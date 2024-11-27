@@ -5,7 +5,7 @@ int main() {
     scanf("%s", string);
     int min = 0;
     int may = 0;
-    for (int i = 0; i < len(string); i++) {
+    for (int i = 0; i < strlen(string); i++) {
         if (string[i] >= 'a' && string[i] <= 'z') {
             min++;
         }
@@ -14,11 +14,15 @@ int main() {
         }
     }
     if (min >= may) {
-        for (int i = 0; i < len(string); i++) {
+        for (int i = 0; i < strlen(string); i++) {
             if (string[i] >= 'A' && string[i] <= 'Z') {
                 string[i] += 32;
             }
-            else {
+        }
+    }
+    else {
+        for (int i = 0; i < strlen(string); i++) {
+            if (string[i] >= 'a' && string[i] <= 'z') {
                 string[i] -= 32;
             }
         }
